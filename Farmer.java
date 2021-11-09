@@ -42,7 +42,33 @@ public class Farmer {
                     System.out.println("Do you want to feed the pigs?(Y/N)");
                     String fdpg;
                     fdpg = scan.next();
+                    switch (fdpg) {
+                        case "Y":
+                            Feed.Consume();
+                            System.out.println(pig1.getName() + ", " + pig2.getName() + " and " + pig3.getName() + " ate " + feed1.getFeedName() + " and " + feed2.getFeedName());
+                            System.out.println("Total left: " + Feed.getAmount() + " bins");
+                            System.out.println("Would you like to go again?? \nY/N");
+                            fdpg = scan.next();
+                            switch (fdpg) 
+                            {
+                                case "Y":
+                                    Feed.Consume();
+                                    System.out.println(pig1.getName() + ", " + pig2.getName() + " and " + pig3.getName() + " ate " + feed1.getFeedName() + " and " + feed2.getFeedName());
+                                    System.out.println("Total left: " + Feed.getAmount() + " bins");
+                                    System.out.println("Would you like to go again?? \nY/N");
+                                    fdpg = scan.next();
+                                    break;
+                                case "N":
+                                    System.out.println("The pigs will not be fed.");
+                                    System.out.println("Total left: " + Feed.getAmount() + " bins");
+                                    break;
+                             }
+                                case "N":
+                                    System.out.println("The pigs will not be fed.");
+                                    System.out.println("Total left: " + Feed.getAmount() + " bins");
+                                break;
                             }
+                        }
         }while (!choice.isEmpty());
     }
 }
