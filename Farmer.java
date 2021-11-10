@@ -31,6 +31,8 @@ public class Farmer {
                     System.out.println();
                     System.out.println("3rd pig name is " + pig3.getName() + "\n gender: " + pig3.getSex() + "\n pig color: " + pig3.getColor() + "\n Date of Birth: " + pig3.getDateOfBirth());
                     System.out.println();
+                    System.out.println("Total pigs: "+Pig.getCount());
+                    System.out.println();
                     break;
                 case "2":
                     System.out.println("How many new bins of Apple do you have?");
