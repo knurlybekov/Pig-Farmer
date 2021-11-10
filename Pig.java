@@ -37,6 +37,7 @@ public class Pig {
         sex = sex_s;
         color = color_c;
         dateOfBirth = dateOfBirth_d;
+        track++;
     }
     public void feed(Feed foodNo) {
         foodNo.Consume();
