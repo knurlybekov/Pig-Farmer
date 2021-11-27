@@ -1,11 +1,10 @@
 package com.company;
-import java.util.Date;
 
 public class Pig {
     private static int track = 0;
-
+private boolean isFed = false;
     private boolean isFemale;
-    private String name, color, sex;
+    private static String name, color, sex;
     private String dateOfBirth;
 
     public static int getCount() {
@@ -13,7 +12,7 @@ public class Pig {
     }
 
     //getter
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -21,11 +20,13 @@ public class Pig {
         return dateOfBirth;
     }
 
-    public String getSex() {
+    public  String getSex(String ss) {
+        sex = ss;
         return sex;
     }
 
-    public String getColor() {
+    public  String getColor(String ccol) {
+        color = ccol;
         return color;
     }
 
@@ -39,7 +40,7 @@ public class Pig {
         dateOfBirth = dateOfBirth_d;
         track++;
     }
-    public void feed(Feed foodNo) {
-        foodNo.Consume();
-    }
+    public void feed(Feed fed) {
+        fed.consume();
+            }
 }
