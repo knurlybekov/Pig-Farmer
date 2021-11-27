@@ -2,28 +2,45 @@ package com.company;
 
 public class Feed {
     private static int binCount;
+    public static String feedName;
+    private static boolean isFull;
+    private static double weight;
 
-    private final String feedName;
 
-    public static int getAmount() {
-        return binCount;
-    }
-
-    public String getFeedName() {
+    //    getters and setters
+    public  String getFeedName() {
         return feedName;
     }
 
-
-    public static void Consume() {
-        if (binCount > 0) {
-            binCount -= 3;
-        }else{
-            System.out.println("There is no food bins left to feed.");
-        }
+    public void setFeedName(String feedName) {
+        this.feedName = feedName;
     }
-    Feed(String feedName_f, int binCount_b) {
+
+    public boolean isFull() {
+        return isFull;
+    }
+
+    public void setFull(boolean full) {
+        isFull = full;
+    }
+
+    public static double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    //A constructor that accepts a parameters: A String type for name of feed
+    Feed(String feedName_f) {
         feedName = feedName_f;
-        binCount = binCount + binCount_b;
+        isFull = true;
     }
-
+    // A public method called add which receives an int value and adds that to the number of bins
+    public void add(int addBin) {
+        binCount += addBin;
+    }
+    public void consume() {
+            isFull = false;
+    }
 }
