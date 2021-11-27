@@ -61,6 +61,7 @@ public class Farmer {
                             if (tempf != null) {
                                 pc.getPigArray()[i].feed(tempf);
                                 System.out.println("Bin used!");
+                                break;
                             } else {
                                 System.out.println("No more bins are left! Go back and add one...");
                                 break;
@@ -70,9 +71,7 @@ public class Farmer {
                     }
                 case 4:
                     System.out.println("Bins avalible: " + fc.getSize());
-                    String pigList = pc.getPigList();
                     System.out.println("Total pigs: "+pc.getPigCount());
-                    System.out.println("Pigs: " + pigList);
                     choice = scan.nextInt();
                     break;
                 case 5:
