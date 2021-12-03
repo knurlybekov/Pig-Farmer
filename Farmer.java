@@ -39,7 +39,7 @@ public class Farmer {
                     break;
                 case 2:
                     System.out.println("Let`s create a feed");
-                    System.out.println("How many number of bin do yoy want?");
+                    System.out.println("How many number of bin do you want?");
                     int nb = scan.nextInt();
                     System.out.println("Feed type: ");
                     String ft = scan.nextLine();
