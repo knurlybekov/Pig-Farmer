@@ -1,4 +1,4 @@
-package com.company;
+package com.company; //made by Sekerbayev Nikolay 
 
 
 public class FeedCollection {
